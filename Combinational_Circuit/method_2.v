@@ -1,18 +1,18 @@
 // combinational circuit for LED glow
 
-module Combinational_Circuit(A,B,C,Q);
+module Combinational_Circuit(S,P,V,LED);
 
-input A,B,C;
+input S,P,V;
 
-output Q;
+output LED;
 
 wire A_NAND_B , A_NOR_B;
 
 // Dataflow modelling
-assign A_NAND_B = (~(A & B) );
+  assign A_NAND_B = (~(S & P) );
 
-assign A_NOR_B = (~(A | B) );
+  assign A_NOR_B = (~(S | P) );
 
-assign Q = (A_NAND_B) & (A_NOR_B) & (C);
+  assign LED = (A_NAND_B) & (A_NOR_B) & (V);
 
 endmodule
