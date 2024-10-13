@@ -20,7 +20,7 @@ The LED should turn on only when all of the following conditions are met:
 
 ### Boolean Expression
 The Boolean expression for the LED control is:
-LED = S & P & V
+LED = ~S & P & V
 
 
 ### Truth Table
@@ -30,11 +30,11 @@ LED = S & P & V
 | 0 | 0 | 0 | 0   |
 | 0 | 0 | 1 | 0   |
 | 0 | 1 | 0 | 0   |
-| 0 | 1 | 1 | 0   |
+| 0 | 1 | 1 | 1   |
 | 1 | 0 | 0 | 0   |
 | 1 | 0 | 1 | 0   |
 | 1 | 1 | 0 | 0   |
-| 1 | 1 | 1 | 1   |
+| 1 | 1 | 1 | 0   |
 
 ### Rules for Modeling Combinational Circuits
 
